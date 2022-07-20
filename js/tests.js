@@ -27,7 +27,7 @@ function testSumAndMultiply() { //eslint-disable-line
 }
 
 function testSumArray() { //eslint-disable-line
-  if (sumArray(testArray)[0] === 9 && sumArray(testArray)[1] === '2,3,4 was passed in as an array of numbers, and 9 is their sum.') {
+  if (sumArray(multArr)[0] === 9 && sumArray(multArr)[1] === '2,3,4 was passed in as an array of numbers, and 9 is their sum.') {
     console.log('%c TEST FOR sumArray() PASSES', 'color: green');
   } else {
     console.log('%c TEST FOR sumArray() FAILS', 'color: red');
@@ -35,7 +35,7 @@ function testSumArray() { //eslint-disable-line
 }
 
 function testMultiplyArray() { //eslint-disable-line
-  if (multiplyArray(testArray)[0] === 24 && multiplyArray(testArray)[1] === 'The numbers 2,3,4 have a product of 24.') {
+  if (multiplyArray(multArr)[0] === 24 && multiplyArray(multArr)[1] === 'The numbers 2,3,4 have a product of 24.') {
     console.log('%c TEST FOR multiplyArray() PASSES', 'color: green');
   } else {
     console.log('%c TEST FOR multiplyArray() FAILS', 'color: red');

@@ -32,7 +32,7 @@ Test this function by hand in the console to get it working, and when you think 
 function multiply(a, b) { //eslint-disable-line
   let mySum2 = a * b;
   let myStr2 = `The product of ${a} and ${b} is ${mySum2}.`;
-
+  // console.log("multiply: " , [mySum2, myStr2]);
   return [mySum2, myStr2];
 }
 
@@ -62,7 +62,7 @@ function sumAndMultiply(a, b, c) { //eslint-disable-line
 
   let response1 = `${a} and ${b} and ${c} sum to ${mySum4}.`;
   let response2 = `The product of ${a} and ${b} and ${c} is ${myMultiply2}.`;
-
+  // console.log("Sum and Multiply:", [mySum4, myMultiply2, response1, response2]);
   return [mySum4, myMultiply2, response1, response2];
 }
 
@@ -83,15 +83,15 @@ IMPORTANT DETAIL: You may not use the arithmetic operator + in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumArray() function and see if the test passes.*/
 
 // Write your code here
-let testArray = [2, 3, 4]; //eslint-disable-line
+let multArr = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
   let sumArray = 0;
   let response3 = "";
-  for (let i = 0; i < testArray.length; i++) {
-    sumArray = sum(sumArray, testArray[i])[0];
-    response3 += `${testArray[i]}`;
-    if (i !== testArray.length - 1) {
+  for (let i = 0; i < multArr.length; i++) {
+    sumArray = sum(sumArray, multArr[i])[0];
+    response3 += `${multArr[i]}`;
+    if (i !== multArr.length - 1) {
       response3 += ',';
     }
   }
@@ -106,7 +106,7 @@ function sumArray(sumArr) { //eslint-disable-line
 
 // Here is the test for sumArray(); uncomment it to run it
 
-testSumArray(testArray);
+testSumArray(multArr);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -122,27 +122,20 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line  
-  let productArray = 1;
-  let response4 = "numbers";
-  for (let i = 0; 1 < testArray.length; i++) {
-    productArray = multiply(productArray, testArray[i])[0];
-    response4 += `${testArray[i]}`;
-    if (i !== testArray.length - 1) {
+  let productAB = multiply(multArr[0], multArr[1]);
+  let productABC = multiply(productAB[0], multArr[2]);
 
-      response4 += ',';
-    }
-  }
+  let productString = `The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${productABC[0]}.`;
 
-
-  response4 += ` have a product of ${productArray}.`;
-  return [productArray, response4];
+  console.log(productABC[0]);
+  console.log(productABC);
+  return [productABC[0], productString];
 }
 
 
 
-
 // Here is the test for multiplyArray(); uncomment it to run it
-testMultiplyArray(testArray);
+testMultiplyArray(multArr);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
